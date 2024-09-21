@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160047376958",
+    "project_id": "britebox-d4790",
+    "storage_bucket": "britebox-d4790.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160047376958:android:cf88e43fc15d4aab493f6f",
+        "android_client_info": {
+          "package_name": "com.briteboxLaundry.Britebox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Ncl64E8up7c0yaLvOhJ9pjWa9xQavGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
