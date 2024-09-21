@@ -1,0 +1,9 @@
+platform :ios, '13.0'  # Ensure this is set to at least 13.0
+
+# CocoaPods analytics sends network usage statistics
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+# You may need to add your app's dependencies here
+
+# Flutter Pod
+flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
