@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:Britebox/AuthenticationPages/LoginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +6,9 @@ import 'package:get/get.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:Britebox/Splash%20Screen/SplashScreen.dart';
-
 import 'MainPage/HomePage.dart';
+
+// Background message handler for Firebase
 @pragma('vm:entry-point')
 Future<void> _firebaseBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp(
@@ -19,15 +19,22 @@ Future<void> _firebaseBackgroundHandler(RemoteMessage message) async {
       projectId: 'britebox-d4790',
       messagingSenderId: '160047376958',
     )
-        : null, // Use default options for iOS if you have them
+        : const FirebaseOptions(
+      apiKey: 'AIzaSyDLsZsCiyHsQ6Fgkxt9ig6tV-AD3Ezof7s',          // Replace with your iOS API key
+      appId: '1:160047376958:ios:48b5f359cbecbacf493f6f',            // Replace with your iOS App ID
+      projectId: 'britebox-d4790',        // Replace with your Firebase project ID
+      messagingSenderId: '160047376958', // Replace with your iOS messaging sender ID
+      iosBundleId: 'com.briteboxLaundry.Britebox',  // Replace with your iOS Bundle ID
+    ),
   );
 }
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   FirebaseMessaging.onBackgroundMessage(_firebaseBackgroundHandler);
+
   if (Firebase.apps.isEmpty) {
-    // Initialize Firebase for both Android and iOS
     await Firebase.initializeApp(
       options: Platform.isAndroid
           ? const FirebaseOptions(
@@ -36,7 +43,13 @@ Future<void> main() async {
         projectId: 'britebox-d4790',
         messagingSenderId: '160047376958',
       )
-          : null, // Use default options for iOS if you have them
+          : const FirebaseOptions(
+        apiKey: 'AIzaSyDLsZsCiyHsQ6Fgkxt9ig6tV-AD3Ezof7s',          // Replace with your iOS API key
+        appId: '1:160047376958:ios:48b5f359cbecbacf493f6f',            // Replace with your iOS App ID
+        projectId: 'britebox-d4790',        // Replace with your Firebase project ID
+        messagingSenderId: '160047376958', // Replace with your iOS messaging sender ID
+        iosBundleId: 'com.briteboxLaundry.Britebox',  // Replace with your iOS Bundle ID
+      ),
     );
   }
 
