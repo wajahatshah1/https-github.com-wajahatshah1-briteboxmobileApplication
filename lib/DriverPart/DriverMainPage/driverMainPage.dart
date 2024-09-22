@@ -10,7 +10,6 @@ import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:googleapis/apigeeregistry/v1.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:mobile_scanner/mobile_scanner.dart';
 import 'dart:async';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:http/http.dart' as http;
