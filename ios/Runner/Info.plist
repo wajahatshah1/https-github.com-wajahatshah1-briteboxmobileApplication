@@ -50,11 +50,6 @@
     </dict>
 
     <!-- Background Modes (equivalent to Wake Lock and Firebase Messaging) -->
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>fetch</string>
-        <string>remote-notification</string>
-    </array>
 
     <!-- Push Notifications Permission -->
     <key>NSPushNotificationsUsageDescription</key>
