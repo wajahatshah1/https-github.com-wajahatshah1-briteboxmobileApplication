@@ -69,14 +69,14 @@ dependencies:
   qr_code_scanner:
   shared_preferences:
   google_maps_flutter:
-  mobile_scanner: 5.2.3
+  mobile_scanner: ^5.2.3
   google_maps_flutter_web:
   pdfx:
   timeline_tile:
   icons_plus:
-  firebase_core: ^1.10.0
-  firebase_messaging: ^10.0.0
-  flutter_local_notifications:
+  firebase_core: ^3.5.0
+  firebase_messaging: ^15.1.2
+  flutter_local_notifications: ^17.2.3
   flutter_map:
   latlong2:
   firebase_messaging_web:
