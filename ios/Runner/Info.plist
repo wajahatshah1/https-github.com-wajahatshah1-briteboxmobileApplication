@@ -4,8 +4,6 @@
 <dict>
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
-    <key>CFBundleDisplayName</key>
-    <string>Britebox</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -13,53 +11,75 @@
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>britebox</string>
+    <string>$(PRODUCT_NAME)</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
     <string>$(FLUTTER_BUILD_NAME)</string>
-    <key>CFBundleSignature</key>
-    <string>????</string>
     <key>CFBundleVersion</key>
     <string>$(FLUTTER_BUILD_NUMBER)</string>
-    <key>LSRequiresIPhoneOS</key>
-    <true/>
-    <key>UILaunchStoryboardName</key>
-    <string>LaunchScreen</string>
-    <key>UIMainStoryboardFile</key>
-    <string>Main</string>
-    <key>UISupportedInterfaceOrientations</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-        <string>UIInterfaceOrientationLandscapeLeft</string>
-        <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
-    <key>UISupportedInterfaceOrientations~ipad</key>
-    <array>
-        <string>UIInterfaceOrientationPortrait</string>
-        <string>UIInterfaceOrientationPortraitUpsideDown</string>
-        <string>UIInterfaceOrientationLandscapeLeft</string>
-        <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
+    <key>LSMinimumSystemVersion</key>
+    <string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>$(PRODUCT_COPYRIGHT)</string>
 
-    <!-- Internet Access -->
+    <!-- Camera permission -->
+    <key>NSCameraUsageDescription</key>
+    <string>We need access to your camera to take photos and videos.</string>
+
+    <!-- Microphone permission -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your microphone for recording audio.</string>
+
+    <!-- Location permission (if your app needs location services) -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need access to your location to enhance the app experience.</string>
+
+    <!-- Photo Library access permission -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library for selecting photos.</string>
+
+    <!-- Phone call permission -->
+    <key>NSContactsUsageDescription</key>
+    <string>We need access to your contacts to enable phone call features.</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We need access to Bluetooth to connect to devices during phone calls.</string>
+
+    <!-- SMS permission -->
+    <key>NSMessageUsageDescription</key>
+    <string>We need access to send and receive SMS messages.</string>
+
+    <!-- Post Notifications permission -->
+    <key>NSUserNotificationUsageDescription</key>
+    <string>We need access to send you notifications for important updates.</string>
+
+    <!-- Internet access permission -->
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
 
-    <!-- Background Modes (equivalent to Wake Lock and Firebase Messaging) -->
+    <!-- Permissions for Background Fetch -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>remote-notification</string>
+    </array>
 
-    <!-- Push Notifications Permission -->
-    <key>NSPushNotificationsUsageDescription</key>
-    <string>We need to send you notifications for updates.</string>
+    
 
-    <!-- SMS and Phone Call Support -->
     <key>LSApplicationQueriesSchemes</key>
     <array>
-        <string>sms</string>
-        <string>tel</string>
+        <string>youtube</string>
+    </array>
+
+
+    <!-- Boot Completed (iOS equivalent for launching the app on boot) -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>remote-notification</string>
     </array>
 </dict>
 </plist>
